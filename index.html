@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./scripts/scripts.js" type="module"></script>
+    <link rel="stylesheet" href="./css/estilos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@300;500&display=swap" rel="stylesheet">
+    <title>Recuperatorio PP Alejo Bianchini</title>
+</head>
+
+<body>
+    <main>
+        <div id="divMain">
+            <form action="">
+                <h1>Form Datos</h1>
+                <fieldset id="fieldsetMain">
+                    <legend>Personas</legend>
+                    <label>Calcular Edad promedio:
+                        <input type="text" id="txtPromedio" name="txtPromedio" placeholder="Promedio" readonly>
+                    </label>
+                    <button type="button" id="btnCalcular">Calcular</button> <br><br>
+                    <label>Filtrar por:</label>
+                    <select name="tipo" id="selectTipo">
+                        <option value="todos">Todos</option>
+                        <option value="heroes">Heroe</option>
+                        <option value="villanos">Villano</option>
+                    </select>
+                </fieldset>
+                <div id="divCheckboxes"></div>
+                <!--<div id="divCheckboxes">
+                    <input type="checkbox" name="filtro[]" value="id" id="checkboxID" checked> ID
+                    <input type="checkbox" name="filtro[]" value="nombre" id="checkboxNombre" checked> Nombre
+                    <input type="checkbox" name="filtro[]" value="apellido" id="checkboxApellido" checked> Apellido
+                    <input type="checkbox" name="filtro[]" value="edad" id="checkboxEdad" checked> Edad
+                    <input type="checkbox" name="filtro[]" value="alterego" id="checkboxAlterEgo" checked> AlterEgo
+                    <input type="checkbox" name="filtro[]" value="ciudad" id="checkboxCiudad" checked> Ciudad
+                    <input type="checkbox" name="filtro[]" value="publicado" id="checkboxPublicado" checked> Publicado
+                    <input type="checkbox" name="filtro[]" value="enemigo" id="checkboxEnemigo" checked> Enemigo
+                    <input type="checkbox" name="filtro[]" value="robos" id="checkboxRobos" checked> Robos
+                    <input type="checkbox" name="filtro[]" value="asesinatos" id="checkboxAsesinatos" checked> Asesinatos
+                </div>-->
+                <div id="divTabla"></div>
+                <button type="button" id="btnAgregar" class="btn">Agregar</button>
+                <button type="button" id="btnReset" class="btn">Reset</button>
+                <label>Presiona este botón para cargar un storage predeterminado</label>
+            </form><br>
+        </div>
+        <div id="divABM">
+            <form hidden>
+                <h1>Form ABM</h1>
+                <fieldset id="fieldsetABM">
+                    <legend>Datos</legend>
+                    <label>ID:
+                        <input type="text" id="txtID" name="txtID" placeholder="ID" readonly>
+                    </label> <br>
+                    <label>Nombre:
+                        <input type="text" id="txtNombre" name="txtNombre" placeholder="Nombre" required>
+                    </label> <br>
+                    <label>Apellido:
+                        <input type="text" id="txtApellido" name="txtApellido" placeholder="Apellido" required>
+                    </label> <br>
+                    <label>Edad:
+                        <input type="number" id="txtEdad" name="txtEdad" placeholder="Edad" required>
+                    </label> <br>
+                    <fieldset>
+                        <legend>Tipo</legend>
+                        <input type="radio" id="rdoHeroe" name="rdoTipo" value="heroe" checked>Heroe
+                        <input type="radio" id="rdoVillano" name="rdoTipo" value="villano">Villano
+                    </fieldset> <br>
+                    <label>Alter Ego:
+                        <input type="text" id="txtAlterEgo" name="txtAlterEgo" placeholder="Alter Ego">
+                    </label> <br>
+                    <label>Ciudad:
+                        <input type="text" id="txtCiudad" name="txtCiudad" placeholder="Ciudad">
+                    </label> <br>
+                    <label>Publicado:
+                        <input type="number" id="txtPublicado" name="txtPublicado" placeholder="Publicado">
+                    </label> <br>
+                    <label>Enemigo:
+                        <input type="text" id="txtEnemigo" name="txtEnemigo" placeholder="Enemigo">
+                    </label> <br>
+                    <label>Robos:
+                        <input type="number" id="txtRobos" name="txtRobos" placeholder="Robos">
+                    </label> <br>
+                    <label>Asesinatos:
+                        <input type="number" id="txtAsesinatos" name="txtAsesinatos" placeholder="Asesinatos">
+                    </label> <br>
+                    <label id="labelErrorMessage" class="errorMessage" hidden>* Uno o más campos no cumple con los requisistos, revise la documentación</label>
+                </fieldset>
+                <input type="submit" id="btnSubmit" value="Guardar" class="btn">
+                <input type="button" id="btnEliminar" value="Eliminar" class="btn">
+                <input type="button" id="btnCancelar" value="Cancelar" class="btn">
+            </form>
+        </div>
+    </main>
+</body>
+
+</html>
